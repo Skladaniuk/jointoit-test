@@ -1,0 +1,16 @@
+.appRoot {
+  display: flex;
+  min-height: 100vh;
+}
+
+.rightColumn {
+  width: 1200px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+}
+
+.mainContent {
+  padding: 24px;
+}

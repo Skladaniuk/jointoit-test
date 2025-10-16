@@ -1,0 +1,203 @@
+.wrapper {
+  background: #fff;
+  border: 1px solid #dfe4ec;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(31, 45, 61, 0.14);
+  padding: 10px 10px 8px;
+  z-index: 3000;
+}
+
+.arrow {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-left: 1px solid #dfe4ec;
+  border-top: 1px solid #dfe4ec;
+}
+
+.close {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #e6e8f0;
+  background: #fff;
+  color: #9aa5b1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+    z-index: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field {
+  position: relative;
+  border-bottom: 1px solid #eef2f7;
+  padding-bottom: 5px;
+}
+
+.fieldIcon {
+  position: relative;
+  border-bottom: 1px solid #eef2f7;
+  padding-bottom: 5px;
+}
+
+.field input,
+.fieldIcon input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  line-height: 1.15;
+  color: #2f3b52;
+  font-weight: 700;
+  padding: 2px 0;
+}
+
+.field input::placeholder,
+.fieldIcon input::placeholder {
+  color: #c9ceda;
+  font-weight: 700;
+}
+
+.fieldIcon i {
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.cancel,
+.save,
+.discard,
+.edit {
+  background: transparent;
+  border: none;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.cancel {
+  color: #e11d48;
+}
+
+.save,
+.edit {
+  color: #6b6fa8;
+}
+
+.viewMode .inputView {
+  font-weight: 700;
+  color: #2f3b52;
+}
+
+.viewMode .inputView::placeholder {
+  color: #2f3b52;
+  opacity: .9;
+}
+
+.viewMode .inputViewItalic {
+  font-style: italic;
+  color: #8d96a0;
+}
+
+.viewMode .inputViewItalic::placeholder {
+  font-style: italic;
+  color: #8d96a0;
+}
+
+.fieldView {
+  border-bottom-color: #e9edf3;
+}
+
+.colorPanel {
+  position: relative;
+  z-index: 1;
+}
+
+.colorPanel :global(.react-colorful) {
+  width: 100%;
+  max-width: 260px;
+  height: 200px;
+  box-shadow: none;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.colorPanel :global(.react-colorful__saturation),
+.colorPanel :global(.react-colorful__last-control) {
+  border-radius: 10px;
+}
+
+.colorPanel :global(.react-colorful__saturation-pointer),
+.colorPanel :global(.react-colorful__hue-pointer) {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+.delete {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 10px;
+  color: #fff;
+  background: #ef4444;
+  border: 1px solid #ef4444;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .2px;
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.22);
+  transition: transform .06s ease, background-color .15s ease, box-shadow .15s ease, border-color .15s ease, color .15s ease;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.28);
+}
+
+.delete:active {
+  transform: translateY(1px);
+  background: #b91c1c;
+  border-color: #b91c1c;
+  box-shadow: 0 4px 10px rgba(185, 28, 28, 0.25);
+}
+
+.delete:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.delete:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(239, 68, 68, 0.9);
+}

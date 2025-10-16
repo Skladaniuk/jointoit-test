@@ -1,0 +1,83 @@
+/* Палетка під референс */
+$bg: #3a3a57;         /* основний фон */
+$bg-dark: #343451;    /* темніша смуга у верхній частині */
+$tile: #424264;       /* плитка пункту */
+$text: #cfd3e2;       /* текст */
+$icon: #aeb3c9;       /* іконка */
+$muted: #8f94ad;      /* вторинний текст */
+$active-bg: #3f3f63;  /* фон активного пункту */
+$accent: #8b7cf3;     /* фіолетовий індикатор активного */
+$divider: rgba(255,255,255,0.06);
+
+.root {
+  width: 232px;
+  min-height: 100vh;
+  background: $bg;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Верхній бренд-блок */
+.brandRow {
+  padding: 14px 16px;
+  background: $bg-dark;
+  border-bottom: 1px solid $divider;
+}
+.brand {
+  color: #e9eaf2;
+  letter-spacing: 0.22em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Навігація */
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px 12px;
+}
+
+/* Плитка пункту */
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: $text;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin: 4px 8px;
+  background: transparent;
+}
+.item:hover { background: rgba(255,255,255,0.04); }
+
+/* Розділення секцій (Help Center вище лінії) */
+.sectionTop { margin-top: 8px; }
+.sectionTop::before {
+  content: "";
+  position: absolute;
+  left: 14px; right: 14px; top: -8px;
+  height: 1px; background: $divider;
+}
+
+/* Іконка-заглушка (замінити на SVG за потреби) */
+.icon {
+  width: 16px; height: 16px; border-radius: 4px;
+  background: $icon;
+  opacity: .9;
+}
+.label { font-weight: 600; font-size: 14px; }
+
+/* Активний пункт “Calendar” */
+.active {
+  background: $active-bg;
+  color: #ffffff;
+}
+.active .icon { background: #ffffff; opacity: .95; }
+.activeBar {
+  content: "";
+  position: absolute;
+  left: 0; top: 8px; bottom: 8px;
+  width: 4px; border-radius: 4px;
+  background: $accent;
+}
